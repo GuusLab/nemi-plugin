@@ -1,0 +1,55 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nemi",
+  "version": "1.0.0",
+  "description": "Work in your Nemi workspace from a conversation: find, read, convert and tidy files, write Docs, build Sheets, run Forms, draw on Canvas, share with links and Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
+  "author": {
+    "name": "GuusLab",
+    "email": "support@nemilab.com",
+    "url": "https://nemilab.com"
+  },
+  "homepage": "https://nemilab.com/help/developers/ai-connection",
+  "repository": "https://github.com/GuusLab/nemi-plugin",
+  "license": "MIT",
+  "keywords": [
+    "nemi",
+    "files",
+    "file-sharing",
+    "docs",
+    "spreadsheets",
+    "forms",
+    "whiteboard",
+    "calendar",
+    "video-meetings",
+    "productivity"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Nemi",
+        "shortDescription": "Your whole workspace, in chat",
+        "longDescription": "Nemi is a workspace for files, sharing and the documents around them, stored in the EU. This plugin connects to your own Nemi account and teaches the assistant how Nemi works: finding and reading files, tidying folders, converting and editing images, writing Docs, building Sheets with formulas that work, designing and publishing Forms and reading their results, drawing diagrams on Canvas, sharing with the right kind of link, opening a Room for a client, beaming files to a phone, and planning with Nemi calendars and Meet. Everything happens as you, under your own permissions.",
+        "developerName": "GuusLab",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://nemilab.com",
+        "supportURL": "https://nemilab.com/help",
+        "privacyPolicyURL": "https://nemilab.com/privacy",
+        "termsOfServiceURL": "https://nemilab.com/tos",
+        "defaultPrompt": [
+          "What is on my Nemi calendar this week?",
+          "Tidy up the Downloads folder in my Nemi workspace",
+          "Make a sign-up form for Saturday's workshop and publish it",
+          "Share the final contract with the client, password protected, for 7 days"
+        ],
+        "brandColor": "#2B9448",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

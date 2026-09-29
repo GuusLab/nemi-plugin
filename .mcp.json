@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nemi": {
+      "type": "http",
+      "url": "https://nemilab.com/api/mcp"
+    }
+  }
+}

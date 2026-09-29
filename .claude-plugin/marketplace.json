@@ -1,0 +1,17 @@
+{
+  "name": "guuslab",
+  "owner": {
+    "name": "GuusLab",
+    "email": "support@nemilab.com"
+  },
+  "metadata": {
+    "description": "GuusLab's plugins for Claude: Nemi, your workspace for files, Docs, Sheets, Forms, Canvas, sharing and calendars."
+  },
+  "plugins": [
+    {
+      "name": "nemi",
+      "source": "./",
+      "description": "Work in your Nemi workspace from a conversation: files, Docs, Sheets, Forms, Canvas, sharing, Rooms, Beam, calendars and Meet."
+    }
+  ]
+}
