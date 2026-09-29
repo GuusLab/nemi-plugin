@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nemi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Work in your Nemi workspace from a conversation: find, read, convert and tidy files, write Docs, build Sheets, run Forms, draw on Canvas, share with links and Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
   "author": {
     "name": "GuusLab",
@@ -45,7 +45,7 @@
           "Make a sign-up form for Saturday's workshop and publish it",
           "Share the final contract with the client, password protected, for 7 days"
         ],
-        "brandColor": "#2B9448",
+        "brandColor": "#E1E752",
         "composerIcon": "./assets/icon.png",
         "composerIconDark": "./assets/icon-dark.png",
         "logo": "./assets/logo.png"
