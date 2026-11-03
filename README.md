@@ -22,10 +22,14 @@ Work in your [Nemi](https://nemilab.com) workspace from a conversation. This plu
    - **Claude Code:** `/plugin marketplace add GuusLab/nemi-plugin`, then `/plugin install nemi@guuslab`.
    - **Codex:** `codex plugin marketplace add GuusLab/nemi-plugin`, then `codex plugin add nemi@guuslab`.
    - **ChatGPT:** add Nemi from the plugin directory once it is listed there.
-2. Connect the Nemi connector when asked, and sign in with your Nemi account. Nemi asks you to approve the connection.
+2. Connect the Nemi connector when asked, and sign in with your Nemi account. Nemi asks you to approve the connection. In Claude the plugin can also connect on its own when you sign in to Claude, if your Claude email address is a verified address on your Nemi account; it then stays connected without signing in again. That connection never reaches Nemi Mail.
 3. Ask in plain language, for example "What is on my Nemi calendar this week?" or "Make a sign-up form for Saturday's workshop and publish it".
 
 You need a Nemi account. Everything works on every plan; what you can do is what your plan and your workspace role allow.
+
+## Safety in Claude Code
+
+The plugin ships hooks: Claude Code asks you before a Nemi tool deletes something, switches a link off, or makes a link or a page other people can open, and every session starts with the Nemi basics skill in mind.
 
 ## Skills
 

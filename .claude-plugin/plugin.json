@@ -1,7 +1,7 @@
 {
   "name": "nemi",
   "displayName": "Nemi",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Work in your Nemi workspace from a conversation: find, read, convert and tidy files, write Docs, build Sheets, run Forms, draw on Canvas, share with links and Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
   "author": {
     "name": "GuusLab",
@@ -23,5 +23,6 @@
     "calendar",
     "video-meetings",
     "productivity"
-  ]
+  ],
+  "hooks": "./hooks/hooks.json"
 }

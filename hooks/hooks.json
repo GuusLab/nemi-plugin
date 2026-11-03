@@ -1,0 +1,35 @@
+{
+  "description": "Nemi: ask before anything that deletes, publishes or reaches other people, and point to the right skill at the start of a session.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*nemi.*__(file_delete|folder_delete|doc_delete|sheet_delete|form_delete|canvas_delete|meet_delete|calendar_event_delete|share_revoke|room_archive|upload_link_disable)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"Nemi: this deletes or switches off something for good. Approve only if you meant it.\"}}'"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*nemi.*__(doc_publish|form_publish|share_create|upload_link_create|room_create|beam_send)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"ask\",\"permissionDecisionReason\":\"Nemi: this makes a link or a page other people can open.\"}}'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"The Nemi plugin is installed. Before the first Nemi tool call, load the nemi:nemi-basics skill.\"}}'"
+          }
+        ]
+      }
+    ]
+  }
+}
