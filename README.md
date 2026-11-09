@@ -29,7 +29,7 @@ You need a Nemi account. Everything works on every plan; what you can do is what
 
 ## Safety in Claude Code
 
-The plugin ships hooks: Claude Code asks you before a Nemi tool deletes something, switches a link off, or makes a link or a page other people can open, and every session starts with the Nemi basics skill in mind.
+The Nemi basics skill tells Claude to ask you before a Nemi tool deletes something, switches a link off, or makes a link or a page other people can open.
 
 ## Skills
 
