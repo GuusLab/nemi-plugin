@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "nemi",
-  "version": "1.1.1",
-  "description": "Work in your Nemi workspace from a conversation: find, read, convert and tidy files, write Docs, build Sheets, run Forms, draw on Canvas, share with links and Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
+  "version": "1.2.0",
+  "description": "Work in your Nemi workspace from a conversation, with Nemi's own interfaces in the chat: browse and share files, read and write Docs, edit Sheets, run Forms, draw on Canvas, open Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
   "author": {
     "name": "GuusLab",
     "email": "support@nemilab.com",
@@ -40,10 +40,10 @@
         "privacyPolicyURL": "https://nemilab.com/privacy",
         "termsOfServiceURL": "https://nemilab.com/tos",
         "defaultPrompt": [
+          "Open Nemi",
           "What is on my Nemi calendar this week?",
           "Tidy up the Downloads folder in my Nemi workspace",
-          "Make a sign-up form for Saturday's workshop and publish it",
-          "Share the final contract with the client, password protected, for 7 days"
+          "Make a sign-up form for Saturday's workshop and publish it"
         ],
         "brandColor": "#E1E752",
         "composerIcon": "./assets/icon.png",

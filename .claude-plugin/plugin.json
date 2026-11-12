@@ -1,8 +1,8 @@
 {
   "name": "nemi",
   "displayName": "Nemi",
-  "version": "1.1.1",
-  "description": "Work in your Nemi workspace from a conversation: find, read, convert and tidy files, write Docs, build Sheets, run Forms, draw on Canvas, share with links and Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
+  "version": "1.2.0",
+  "description": "Work in your Nemi workspace from a conversation, with Nemi's own interfaces in the chat: browse and share files, read and write Docs, edit Sheets, run Forms, draw on Canvas, open Rooms, beam files to a phone, and plan with Nemi calendars and Meet.",
   "author": {
     "name": "GuusLab",
     "email": "support@nemilab.com",
@@ -12,6 +12,10 @@
   "repository": "https://github.com/GuusLab/nemi-plugin",
   "license": "MIT",
   "privacyPolicyUrl": "https://nemilab.com/privacy",
+  "termsOfServiceUrl": "https://nemilab.com/tos",
+  "documentationUrl": "https://nemilab.com/help/developers/ai-connection",
+  "supportUrl": "https://nemilab.com/help",
+  "icon": "./assets/icon.png",
   "keywords": [
     "nemi",
     "files",

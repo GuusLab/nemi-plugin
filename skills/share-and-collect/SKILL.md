@@ -70,6 +70,12 @@ If an organisation policy caps expiry or forbids something, the tool says so; re
 - Stop an upload link: `upload_link_disable`. Files already received stay.
 - Find the id with `share_list` or `upload_link_list` first. Match on the name, the address or the date the user mentions.
 
+## When the link is shown as a card
+
+In a client with interactive views, every link you make is shown as a card with the address, Copy, a QR code, and badges for the password and the end date. Then do not paste the address a second time. Say in one or two lines what the link lets someone do, when it stops working and how to send the password (separately from the link). A "No password" badge on a share or a Room is a prompt to mention it: offer to add one with `share_update` if the files are personal or contractual.
+
+The card's **Switch off** button sends you a request to end that link. `share_revoke` is permanent, so confirm it names the link the user means, then do it.
+
 ## Checking what is out there
 
 When the user asks "what have I shared" or wants a clean-up, list with `share_list`, `upload_link_list` and `room_list`, and present a short table: name, what it holds, expiry, password yes or no. Offer to switch off the ones that look stale; do not switch anything off without a yes.

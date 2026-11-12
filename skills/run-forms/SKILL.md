@@ -55,6 +55,8 @@ Start from a preset and change one or two keys: a party gets `playful` or `sunse
 - For open text answers, group them into themes and quote one or two short, representative answers.
 - The response sheet id is returned; the user can open it in Sheets, and `sheet_get` can read it.
 
+When `form_responses` is shown as charts (clients with interactive views), the user sees every count and percentage already. Give the reading, not the numbers: what leads, what is split, what is surprising, and what you would do with it. If they press an answer and ask "who said this", you are told the question and the answer; look in the responses for the rows that match.
+
 ## Delete
 
 `form_delete` removes the form and its link permanently, and keeps the response sheet. Confirm first.

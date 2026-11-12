@@ -17,6 +17,12 @@ Only calendars **made in Nemi** are reachable. Calendars the user connected from
 - Present an agenda grouped by day, in time order, with times in the user's zone and 24-hour or 12-hour format to match how they write.
 - For "when am I free", list the gaps inside working hours (09:00 to 17:00 unless the user says otherwise) and repeat the caveat about connected calendars.
 
+## When the week is shown
+
+In a client with interactive views, `calendar_events` shows a week grid (an agenda for longer windows) that the user can page through and add events to. Ask for the window that matches the question: a Monday-to-Sunday week for "this week", one day for "today". Then do not list the events again: say what stands out (overlaps, the longest free block, an early start) and still mention that connected Google, Outlook and ICS calendars are not in it.
+
+When the user opens an event in the view and says "move this" or "cancel this", you are told which event, with its id and calendar. Use `calendar_event_update` or `calendar_event_delete` on that id; ask for the new time if they did not give one.
+
 ## Creating events
 
 `calendar_event_create` needs `calendar_id`, `title`, `start` and `end`.

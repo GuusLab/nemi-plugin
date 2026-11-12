@@ -13,6 +13,8 @@ Reorganising is where an assistant can save the most time and do the most damage
 - For a whole workspace, walk the folders one level at a time. Stop and summarise if it is very large rather than listing thousands of files.
 - `storage_info` when space is part of the question.
 
+In a client with interactive views, `file_list` shows a browser the user can walk through themselves. During a survey you will call it many times; that is expected, but tell the user up front that you are looking through the folders, and put the findings in the proposal rather than commenting on each listing. When the user selects files in the browser and says "move these" or "what are these", use that selection instead of asking for names.
+
 ## 2. Propose
 
 Group the files and show the plan as a short table before moving anything:

@@ -50,6 +50,14 @@ Errors you may see: `#NAME?` (unknown function), `#REF!`, `#VALUE!`, `#DIV/0!`, 
 2. To add rows, write them below the last filled row. Then extend any totals or ranges that should include them (`=SUM(B2:B20)` becomes `=SUM(B2:B23)`).
 3. `sheet_get` again and check the `display` values of the formulas you touched.
 
+## When the sheet is shown as a grid
+
+In a client with interactive views, `sheet_get` shows the user the grid itself, and they can edit cells in it. Three consequences:
+
+- Do not print the sheet back as a table. Point at cells by reference ("C6 divides by zero") and let the grid show the rest.
+- The selection is yours to use. When the user selects a range and asks "what is wrong here" or "add a total under this", you are told the range and its values, formulas included.
+- Read before you write. The user may have typed into the grid since your last `sheet_get`, so call it again before a `sheet_set_cells` that touches cells you did not just read, and keep what they entered.
+
 ## Read and analyse
 
 `sheet_get` returns each filled cell with `value` (the stored value or formula) and `display` (the calculated result). Quote `display` values when answering; they are what the user sees. When the user asks "what is the total" and there is no total cell, compute it yourself from the values and say that you did.

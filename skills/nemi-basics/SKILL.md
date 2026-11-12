@@ -24,8 +24,37 @@ Nemi keeps different kinds of things in different places, and the tools follow t
 | their agenda | Nemi calendars | `calendar_events` |
 | a link they sent out | shares and upload links | `share_list`, `upload_link_list` |
 | how Nemi itself works | the help centre | `help_search`, then `help_article` |
+| "open Nemi", an overview, "catch me up" | home | `nemi_home` (workspaces, storage, the coming week and recent documents in one call) |
 
 If a name search in `file_list` returns nothing, try the Docs, Sheets, Forms and Canvas lists before telling the user it does not exist. A "report" is as likely to be a Nemi Doc as a PDF.
+
+## Interactive views
+
+In a client that can show them (Claude does), some results arrive as a piece of Nemi the user can see and use, instead of text. When the server's instructions mention interactive views, they are on. Work with them, not around them.
+
+| Result | What the user sees | What they can do there |
+| --- | --- | --- |
+| `file_list` | a file browser | open folders, search, select files, Share, Download, Summarise |
+| `doc_get` | the document as a page | select a passage, copy, download |
+| `sheet_get` | the grid with a formula bar | select a range (sum, average, count), edit a cell, download CSV |
+| `calendar_events` | a week, or an agenda | page to other weeks, open an event, add an event |
+| `form_responses` | a chart per question and a table | press an answer, download CSV |
+| `canvas_get`, `canvas_update` | the board | pan and zoom |
+| `share_create`, `upload_link_create`, `room_create`, `meet_create`, `doc_publish`, `form_publish` | a card with the address | copy, open, scan the QR code |
+| `beam_send` | the QR code and a countdown | scan it |
+| `nemi_home` | home | storage, the week, recent documents, shortcuts |
+
+How to behave when a view is shown:
+
+- **Do not repeat it.** The user is looking at the folder, the grid or the week. Do not list it again or rebuild it as a table. Say what matters in a line or two (the overlap on Thursday, the formula that errors, the answer that stands out) and stop.
+- **After a link card, do not paste the address again.** The card has it, with Copy. Say what the link gives access to, when it stops working and whether it has a password. Paste the address only in a client with no views, or when asked.
+- **"This", "these" and "that one" mean the selection.** A view tells you what is on screen and what is selected in it: files with their ids, a cell range with its values, an event with its id, a passage of text, an answer to a question. Act on that without asking the user to name or paste anything. If nothing is selected and the request needs a selection, ask them to select it in the view.
+- **A message from a view is the user's own request.** Pressing Share, Summarise, Reschedule or Switch off in a view sends a sentence for them, with the ids in it. Treat it exactly as if they typed it, including the "ask before public or permanent" rule below when it goes further than the button said.
+- **The user can change things in a view.** They may have edited cells in a sheet or added an event since you last read. Read again (`sheet_get`, `calendar_events`) before you write over either, and never restore a value you remembered over one they typed.
+- **Pick the tool whose view fits the request.** "Show me the folder" wants `file_list`, not a description from memory. "Show me the document" wants `doc_get`. To open something large, just call the tool: the user can expand the view themselves.
+- **Do not call a view-backed tool only to produce a card.** While working through a task (reading five sheets to compare them), every `sheet_get` shows a grid. That is fine when the user wants to see them and noise when they asked for one number. Prefer the fewest reads that answer the question.
+
+In a client without views everything above arrives as text, and the rules in the rest of this skill apply unchanged.
 
 ## Ids
 

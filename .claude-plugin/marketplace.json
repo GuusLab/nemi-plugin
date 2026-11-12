@@ -11,7 +11,7 @@
     {
       "name": "nemi",
       "source": "./",
-      "description": "Work in your Nemi workspace from a conversation: files, Docs, Sheets, Forms, Canvas, sharing, Rooms, Beam, calendars and Meet."
+      "description": "Work in your Nemi workspace from a conversation, with Nemi's own interfaces in the chat: files, Docs, Sheets, Forms, Canvas, sharing, Rooms, Beam, calendars and Meet."
     }
   ]
 }

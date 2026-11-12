@@ -37,6 +37,8 @@ There is no partial edit. Every change is: read, change the text, write it all b
 
 Others may be editing the same document live. Read immediately before you write, and keep the gap short. If the user says someone else is working in it, append instead of replacing when that does the job.
 
+When `doc_get` is shown as a page (clients with interactive views), the user can select a passage in it. "Tighten this", "translate this paragraph" and "is this right" then refer to the selected text, which you are given. Find it in the body you read, change only that part, and write the whole body back with mode replace. Do not print the document back into the conversation; the page is already on screen.
+
 ## Pictures
 
 `doc_add_image` is the only way to put a picture in a doc. Give a `file_id` for an image in the file tree (find it with `file_list`) or a Gallery `photo_id`, an optional `caption`, and `position` "start" or "end". A share link or a download link pasted into the Markdown will not render as a picture. To put a picture in the middle, add it, then `doc_get`, move the image line to where it belongs, and `doc_update` replace.

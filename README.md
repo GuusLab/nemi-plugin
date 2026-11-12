@@ -15,6 +15,26 @@ Work in your [Nemi](https://nemilab.com) workspace from a conversation. This plu
 - **Sharing:** make the right link every time: share links with passwords and expiry, upload links to collect files from people without an account, Rooms for clients, and Beam to get files onto your phone with a QR code.
 - **Calendar and Meet:** read your agenda, find free time, create and move events (including repeating ones) and set up video calls with the link in the invite.
 
+## Nemi in the conversation
+
+In Claude, and in any other client that supports interactive views, answers from Nemi are not only text. They arrive as Nemi itself, with the same icons and colours as the app, and you can use them:
+
+| You ask for | You get |
+| --- | --- |
+| a folder, or a search | a file browser: open folders, search every workspace, select files, then Share, Download or Summarise |
+| a document | the page, set as a page: select a passage and ask about it |
+| a spreadsheet | the grid with a formula bar: select cells for a sum, edit a cell in place, download a CSV |
+| your calendar | a week you can page through: open an event, join its call, add one by pressing an empty hour |
+| form responses | a chart per question and a table of responses |
+| a canvas | the board, which you can drag and zoom |
+| a share link, upload link, Room, meeting or published page | a card with Copy, a QR code, and whether it has a password and an end date |
+| a Beam | the QR code and a countdown |
+| "open Nemi" | home: storage, the coming week, recent documents and shortcuts |
+
+The assistant knows what you are looking at and what you selected, so "share these", "why is this one wrong" and "move this to Friday" work without naming anything. Views open larger from the arrows in their corner, follow light and dark, and work on a phone. A view loads nothing from the network while you use it, and never makes a link or deletes anything by itself: those go through the conversation, where your client can ask you first. More: [Nemi inside the conversation](https://nemilab.com/help/developers/interactive-views).
+
+Views are being switched on gradually. Without them, everything works as text.
+
 ## Getting started
 
 1. Install the plugin:
@@ -35,7 +55,7 @@ The Nemi basics skill tells Claude to ask you before a Nemi tool deletes somethi
 
 | Skill | Helps with |
 | --- | --- |
-| `nemi-basics` | Where things live in Nemi, ids, and when to ask before acting |
+| `nemi-basics` | Where things live in Nemi, ids, interactive views, and when to ask before acting |
 | `share-and-collect` | Share links, upload links, Rooms and Beam |
 | `write-docs` | Creating, editing, illustrating and publishing Docs |
 | `build-sheets` | Spreadsheets with the formulas Nemi supports |
@@ -48,7 +68,9 @@ The Nemi basics skill tells Claude to ask you before a Nemi tool deletes somethi
 
 ## Commands
 
-In Claude Code and Cowork: `/nemi:agenda`, `/nemi:share`, `/nemi:collect`, `/nemi:tidy`, `/nemi:form`, `/nemi:results`, `/nemi:handoff` and `/nemi:catch-up`. In chat they load as skills and apply when the request fits. Claude Code and Cowork also get a `workspace-organizer` agent for large clean-ups.
+In Claude Code and Cowork: `/nemi:home`, `/nemi:agenda`, `/nemi:share`, `/nemi:collect`, `/nemi:tidy`, `/nemi:form`, `/nemi:results`, `/nemi:handoff` and `/nemi:catch-up`. In chat they load as skills and apply when the request fits. Claude Code and Cowork also get a `workspace-organizer` agent for large clean-ups.
+
+The Nemi connector offers the same tasks as prompts of its own (Catch up, Agenda, Share files, Collect files, Tidy a folder, Make a form, Form results, Client hand-off), so a client that lists a connector's prompts shows them even without this plugin.
 
 ## Data and privacy
 
